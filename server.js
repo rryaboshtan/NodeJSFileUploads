@@ -6,23 +6,23 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-// const hbs = require('express-handlebars');
+const hbs = require('express-handlebars');
 
-app.set('view engine', 'ejs');
-// app.engine(
-//    'hbs',
-//    hbs({
-//       extname: 'hbs',
-//       defaultLayout: 'layout',
-//       defaultView: 'default',
-//       layoutsDir: path.join(__dirname, 'views'),
-//       partialsDir: path.join(__dirname, 'views/partials'),
-//    })
-// );
-// app.set('view engine', 'hbs');
+app.set('view engine', 'hbs');
+app.engine(
+   'hbs',
+   hbs({
+      extname: 'hbs',
+      // defaultLayout: 'layout',
+      defaultView: 'default',
+      layoutsDir: path.join(__dirname, 'views'),
+      partialsDir: path.join(__dirname, 'views/partials'),
+   })
+);
+app.set('view engine', 'hbs');
 
 app.get('/', (req, res) => {
-   res.send('<h3>Express server</h3>');
+   res.render('main');
 });
 
 app.listen(3000, () => console.log('Server is started on http://localhost:3000'));
