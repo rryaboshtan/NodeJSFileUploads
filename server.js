@@ -21,8 +21,6 @@ app.engine(
 );
 app.set('view engine', 'hbs');
 
-app.get('/', (req, res) => {
-   res.render('main');
-});
+app.use('/', require('./server/router/router'))
 
 app.listen(3000, () => console.log('Server is started on http://localhost:3000'));
