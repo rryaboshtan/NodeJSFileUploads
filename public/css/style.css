@@ -16,28 +16,14 @@ body {
 
 .images {
     margin-left: 6rem;
-    justify-content: stretch;
-}
-
-.base64image {
-    /* width: 200px; */
-    /* height: 200px; */
 }
 
 .card {
-    /* max-height: 500px; */
     position: relative;
     height: 600px;
-    align-items:stretch;
-    justify-content: stretch;
-
 }
 .readmore {
     position: absolute;
     bottom: 5px;
     left: 95px;
-}
-.card-body {
-    align-items:stretch;
-    justify-content: flex-end;
 }
