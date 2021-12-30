@@ -1,3 +1,5 @@
+# FILE UPLOADS
+
 ## Used technologies
     - CSS
     - Node JS
@@ -6,3 +8,6 @@
     - MongoDB
     - Express Handlebars
     - MVC
+
+### Screenshots
+![](screenshots/screenshot1.png)
